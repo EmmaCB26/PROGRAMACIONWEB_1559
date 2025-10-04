@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas y Formularios</title>
+    <meta name="author" content="Diego Emmanuel Cabrera Brito">
+    <title>Listas y Formularios</title>
+</head>
+<body>
+    <h1>Listas y Formularios</h1>
+    <h2>Listas</h2>
+<!--Listas desordenadas-->
+
+    <ul>
+        <li>Leche</li>
+        <li>Huevos</li>
+        <li>Carne</li>
+        <li>Pollo</li>
+        <li>Jamón</li>
+    </ul>
+
+    <!--Listas ordenadas-->
+    <!--Type elige si quieres usar letras numeros romanos o lo que quieras y start 
+    indica desde donde empezar a contar-->
+
+
+    <ol type="1" start="2">
+        <li>Primero</li>
+        <li>Segundo</li>
+        <li>Tercero</li>
+        <li>Cuarto</li>
+        <li>Quinto</li>
+    </ol>
+
+    <!--Lista de definiciones-->
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>Lenguaje de marcado de Hipertextos</dd>
+        <dt>CSS</dt>
+        <dd>Hoja de Estilos de Cascada</dd>
+        <dt>JS</dt>
+        <dd>JavaScript</dd>
+    </dl>
+
+    <!--Listas anidadas-->
+
+    <p>Desarrollo Web</p>
+    <ul>
+        <li>Frontend
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+            </ol>
+        </li>
+        <li>Backend
+            <ol>
+                <li>NodeJS</li>
+                <li>MySQL</li>
+                <li>Debian</li>
+            </ol>
+        </li>
+    </ul>
+
+    <!--Formularios-->
+    <!--Action es una ruta o archivo para ver como proccesa la información del formulario y method la forma en la que se transporta la información-->
+    <p>Formulario de inicio de sesión</p>
+    <form action="/inicio_sesion" method="post">
+        <!--label le da una etiqueta al campo de entrada-->
+        <label for="username">Nombre de usuario:</label>
+        <!--Input es la entrada. El type es el typo de dato que va a introducir el usuario.
+        Id va a relacionar el campo de entrada con la etiqueta, con el label.
+        name para procesar datos en el backend. 
+        Recomendación que Id y name sean iguales-->
+        <input type="text" name="username" id="username" placeholder="Introduce tu nombre de usuario" required>
+        <br>
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" id="password" placeholder="Introduce tu contraseña" required>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br><br><br>
+    <p>Formulario con campo de entrada de varias lineas</p>
+    <!--Metodo get trae información-->
+    <form action="/validación.php" method="get">
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" id="name" required placeholder="Introduce tu nombre">
+        <br>
+        <label for="opinion">Comentarios:</label>
+        <!--Textarea para que el usuario tenga un espacio enorme para que escriba el usuario-->
+        <!--Atributos igual que los de input y unos exclusivos:
+        rows y cols para su tamaño-->
+        <textarea name="opinion" id="opinion" rows="4" cols="40" placeholder="Tu opinión es importante"></textarea>
+        <br>
+        <button type="submit">Enviar</button>
+
+        <p>Formularios con listas desplegables de opciones</p>
+        <!---->
+        <form action="/seleccion_bebidas_postres" method="post">
+            <label for="bebidas">Bebidas:</label>
+            <select name="bebidas" id="bebidas">
+                <option value="limonada">Limonada</option>
+                <option value="naranjada">Naranjada</option>
+                <option value="refresco">Refresco</option>
+                <option value="licuado">Licuado</option>
+                <option value="agua">Agua</option>
+            </select>
+            <br>   
+            <label for="postres">Postres:</label>
+            <select name="postres" id="postres">
+                <option value="pay_limon">Pay de limón</option>
+                <option value="pay_fresa">Pay de fresa</option>
+                <option value="Pastel">Pastel</option>
+            </select>
+            <br>
+            <button type="submit">Enviar</button>
+    </form>
+
+    <P>Formularios complejos con distintos campos de datos</P>
+
+    <form action="/datos_usuario" method="post">
+        <fieldset>
+            <legend>Nombre</legend>
+            <label for="nombre">Nombre (s):</label>
+            <input type="text" name="nombre" id="nombre" required placeholder="Introduce tu nombre">
+            <br>
+            <label for="ap_paterno">Apellido Paterno:</label>
+            <input type="text" name="ap_paterno" id="ap_paterno" required placeholder="Introduce tu apellido Paterno">
+            <br>
+            <label for="ap_materno">Apellido Materno:</label>
+            <input type="number" name="ap_materno" id="ap_materno" required placeholder="Introduce tu apellido materno">
+        </fieldset>
+
+        <fieldset>
+            <legend>Otros datos</legend>
+            <label for="fecha_nacimiento">Fecha de nacimiento</label>
+            <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" required>
+            <br>
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" id="edad" required placeholder="Ingresa tu edad">
+            <br>
+            <label for="num_cuenta">Número de cuenta:</label>
+            <input type="text" name="num_cuenta" id="num_cuenta" minlength="8" maxlength="9" required placeholder="Ingresa tu número de cuenta de la UNAM">
+            <br>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" name="email" id="email" required placeholder="Introduce tu correo electrónico">
+        </fieldset>
+
+        <fieldset>
+            <legend>Dirección</legend>
+            <label for="calle">Calle:</label>
+            <input type="text" name="calle" id="calle" value="Emiliano Zapata" required placeholder="Ingresa el nombre de tu calle">
+            <br>
+            <label for="num_casa">Número de casa:</label>
+            <input type="text" name="num_casa" id="num_casa" required placeholder="Ingresa el número de tu casa">
+            <br>
+            <label for="colonia">Colonia:</label>
+            <input type="text" name="colonia" id="colonia" required placeholder="Introduce tu colonia">
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>
