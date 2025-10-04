@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document HTML</title>
+    <!--Esto de author es obligatorio jajsajsjs-->
+    <meta name="author" content="Diego Emmanuel Cabrera Brito">
+    <!--uwu     date de baja de la carrera emi-->
+    <title>Tablas</title>
+</head>
+<body>
+    <!--etiqueta para imagen externa-->
+    <p>esta imagen esta en la web</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREihMDwaXF1w9dJyziz-bkBQYHm234IT4icA&s">
+    <!-- etiqueta para imagen en el servidor-->
+    <p>esta imagen esta en el servidor</p>
+    <img src="imagenes/patricio culon.jpg" alt="patricio culon" width="300px" height="150px">
+    <!--etiquetas para videos-->
+    <p>este es un video</p>
+    <video src="media/como grabar video de pantalla en windows 10 - Buscar con Google - Google Chrome 2025-09-17 15-08-34.mp4" controls loop width="500px " height="300px" alt="grabacion de pantalla"></video>
+    <br>
+    <!--No recuerdo si pidio video de la web, ya que en el aula no tenía internet pero
+    aqí esta :D-->
+    <p>Este es un video en la web</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zK1mLIeXwsQ?si=vfSqrFXv8M2aP7s_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!--etiqueta de audio-->
+    <p>este es un audio</p>
+    <audio src="media/Musica-de-fondo.mp3" controls loop alt="feria de cp" autoplay></audio>
+    <!--tablas HTML-->
+    <h2>Tablas HTML</h2>
+    <table border="1px">
+
+       <!--Titulo de la tabla con caption-->
+        <caption>Paises</caption>
+        <tr>
+            <!-- th es para encabezados de tablas en negritas-->
+            <th>Pais</th>
+            <th> Capital</th>
+            <th>Lengua</th>
+            <th> Continente</th>
+            <th>Ciudad</th>
+        </tr>
+        <!-- tr es para crear nueva fila llenas de td-->
+        <tr>
+            <td> Mexico</td>
+             <!--rejilla de nuestra tabla-->
+            <td>CDMX</td>
+            <td> Español</td>
+            <td>America </td>
+            <td> Ciudad Neza</td>
+        </tr>
+        <!--3 paises mas-->
+        <tr>
+            <td> Peru</td>
+             <!--rejilla de nuestra tabla-->
+            <td>Lima</td>
+            <td> Español</td>
+            <td>America </td>
+            <td>Cusco</td>
+        </tr>
+        <tr>
+            <td> Colombia</td>
+             <!--rejilla de nuestra tabla-->
+            <td>Bogota</td>
+            <td> Español</td>
+            <td>America </td>
+            <td> Medellin</td>
+        </tr>
+        <tr>
+            <td> Argentina</td>
+             <!--rejilla de nuestra tabla-->
+            <td>Buenos Aires</td>
+            <td> Español</td>
+            <td>America </td>
+            <td>Cordoba</td>
+        </tr>
+     
+
+    </table>
+
+    <!--Tablas con celdas fusionadas-->
+    <hr>
+    <table border="1px">
+        <caption>AUTOS</caption>
+        <tr>
+            <!--rowspan fusiona filas, colspan fusiona columnas-->
+            <th rowspan="2">Modelo</th>
+            <th colspan="2">Precio</th>
+
+        </tr>
+        <tr>
+            <th>Nuevo</th>
+            <th>Usado</th>
+        </tr>
+
+        <tr>
+            <td>Ferrari Italia</td>
+            <td> $10,000,000</td>
+            <td> $5,000,000</td>
+
+
+        </tr>
+
+
+    </table>
+<table border="1px">
+        <caption>Horario</caption>
+        <tr>
+            <!--th pone los subtitulos de las tablas en negritas y centrado-->
+            <th>Horas</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+        </tr>
+
+        <tr>
+            <!--td para agregar ya la información-->
+            <!--rowspan es para fusionar filas-->
+            <td>8:00-9:00</td>
+            <td rowspan="2">Matemáticas</td>
+            <td>Lengua</td>
+            <td>Música</td>
+            <td></td>
+            <td rowspan="2">Matemáticas</td>
+        </tr>
+
+        <tr>
+            <td>9:00-10:00</td>
+            <td>Inglés</td>
+            <td>Inglés</td>
+            <td>Educación Física</td>
+        </tr>
+        <tr>
+            <!--colspan es para fusionar columnas-->
+            <td>10:00-10:30
+            <td colspan="5">Recreo</td>
+        </tr>
+        <tr>
+            <td>10:30-11:30</td>
+            <td>Educación Física</td>
+            <td>Valenciano</td>
+            <td rowspan="2">Lengua</td>
+            <td>Informática</td>
+            <td>Inglés</td>
+        </tr>
+        <tr>
+            <td>11:30-12:30</td>
+            <td>Música</td>
+            <td>Educación Física</td>
+            <td rowspan="2">Matemáticas</td>
+            <td>Informática</td>
+        </tr>
+
+        <tr>
+            <td>12:30-1:30</td>
+            <td></td>
+            <td>Informática</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+
+
+</body>
+</html>
